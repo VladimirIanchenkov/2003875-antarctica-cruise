@@ -1,10 +1,11 @@
-.btn {
-  display: inline-flex;
-  padding: 10px 20px;
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px 20px 17px 20px;
 
-  color: $color-default-white;
+  color: $color-tangaroa;
 
-  background-color: $color-neon-blue;
+  background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
 
