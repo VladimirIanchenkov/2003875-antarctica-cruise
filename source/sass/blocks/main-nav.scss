@@ -120,6 +120,7 @@
 .main-nav--opened .main-header__logo {
   @include vp-767 {
     margin-bottom: 23px;
+
     svg {
       fill: $color-tangaroa;
     }

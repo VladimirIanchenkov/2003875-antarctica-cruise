@@ -11,7 +11,8 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './js/main.js',
-    vendor: './js/vendor.js'
+    vendor: './js/vendor.js',
+    map : './js/map.js'
   },
   devtool: isDev ? 'source-map' : false,
   output: {

@@ -5,6 +5,7 @@
   background-color: #ecf6ff;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 
   @include retina {
     background-image: url("../img/background-advantages-image-desktop@2x.jpg");

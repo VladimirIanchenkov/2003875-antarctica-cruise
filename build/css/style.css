@@ -453,6 +453,10 @@ body {
 a {
   color: #011c40;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img,
@@ -559,6 +563,10 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -1067,6 +1075,7 @@ button,
   background-color: #ecf6ff;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .advantages h2 {
@@ -1262,6 +1271,7 @@ button,
   background-image: url("../img/background-booking-image-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 100%;
   min-height: 555px;
 }
 
@@ -2132,6 +2142,7 @@ button,
     padding-top: 62px;
     padding-bottom: 65px;
     background-image: url("../img/background-booking-image-mobile.jpg");
+    background-position: 50% 50%;
     min-height: 760px;
   }
 

@@ -39,6 +39,7 @@ body {
 a {
   color: $color-tangaroa;
   text-decoration: none;
+  user-select: none;
 }
 
 img,
@@ -128,4 +129,5 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+  user-select: none;
 }
