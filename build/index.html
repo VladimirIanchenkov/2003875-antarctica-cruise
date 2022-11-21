@@ -24,10 +24,6 @@
             searchControlProvider: 'yandex#search'
         }),
 
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div>$[properties.iconContent]</div>'
-        ),
-
         myPlacemark = new ymaps.Placemark([59.938635, 30.323118],{
         }, {
             iconLayout: 'default#image',
@@ -35,7 +31,7 @@
             iconImageSize: [18, 22],
             iconImageOffset: [-9, -22]
         }),
-        console.log(myMap);
+
         myMap.geoObjects.add(myPlacemark);
       }
     </script>

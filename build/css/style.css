@@ -1134,7 +1134,7 @@ button,
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2vw;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding-left: 15px;
@@ -1746,10 +1746,6 @@ button,
     line-height: 39px;
   }
 
-  .main-catalog__list {
-    gap: 4vw;
-  }
-
   .main-catalog__item:hover,
   .main-catalog__item:focus,
   .main-catalog__item:focus-visible {
@@ -2118,7 +2114,6 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 30px;
     padding-left: 10px;
     padding-right: 10px;
   }
