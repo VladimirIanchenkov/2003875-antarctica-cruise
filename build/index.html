@@ -11,6 +11,34 @@
     <link rel="preload" href="./fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=aa2e24c8-e05f-4356-8994-4b3c5d7c4590&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      var myMap;
+      ymaps.ready(init);
+
+      function init () {
+        myMap = new ymaps.Map('map', {
+            center: [59.93955, 30.32358],
+            zoom: 15.5
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div>$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark([59.938635, 30.323118],{
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/svg/icon-pin.svg',
+            iconImageSize: [18, 22],
+            iconImageOffset: [-9, -22]
+        }),
+        console.log(myMap);
+        myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -258,8 +286,12 @@
 
         <section class="early-booking">
           <div class="early-booking__container container">
-            <h2>Раннее бронирование</h2>
-            <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            <div class="early-booking__container-inner">
+              <h2>Раннее бронирование</h2>
+              <p>Забронируйте тур<br>
+                за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+              </p>
+            </div>
             <form class="early-booking__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
               <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
               <fieldset>
@@ -268,16 +300,31 @@
                   <input type="text" id="name" name="name" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё].*" title="Первый символ - буква" minlength="1" maxlength="25" required>
                 </label>
                 <label class="early-booking__form-field">
-                  <input type="tel" id="tel" name="telephone-number" placeholder="Телефон" pattern="\8\[0-9]{10}" title="8xxxxxxxxxx" maxlength="11" required>
+                  <input type="tel" id="tel" name="telephone-number" placeholder="Телефон" pattern="8[0-9]{10}" title="8xxxxxxxxxx" maxlength="11" required>
                 </label>
                 <label class="early-booking__form-field">
                   <input type="email" id="email" name="e-mail" placeholder="Email" required>
                 </label>
               </fieldset>
-              <input class="visually-hidden" type="checkbox" id="consent" name="сonsent" checked required>
-              <label class="early-booking__form-label" for="consent">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
+              <div class="early-booking__consent-container">
+                <input class="visually-hidden" type="checkbox" id="consent" name="сonsent" checked required>
+                <label class="early-booking__form-label" for="consent">Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</label>
+              </div>
               <button type="submit" class="button">Оставить заявку</button>
             </form>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts__container container">
+            <div class="contacts__map contacts__map--nojs" id="map"></div>
+            <div class="contacts__address-container">
+              <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+              <address>
+                <p>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</p>
+                <a href="tel:+78002000000">8-800-200-00-00</a>
+              </address>
+            </div>
           </div>
         </section>
       </main>

@@ -1,0 +1,264 @@
+.early-booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("../img/background-booking-image-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 555px;
+
+  @include retina {
+    background-image: url("../img/background-booking-image-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    padding-top: 85px;
+    padding-bottom: 100px;
+    background-image: url("../img/background-booking-image-tablet.jpg");
+    min-height: 805px;
+
+    @include retina {
+      background-image: url("../img/background-booking-image-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 62px;
+    padding-bottom: 65px;
+    background-image: url("../img/background-booking-image-mobile.jpg");
+    min-height: 760px;
+
+    @include retina {
+      background-image: url("../img/background-booking-image-mobile@2x.jpg");
+    }
+  }
+}
+
+.early-booking__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+
+.early-booking__container-inner {
+  width: 43%;
+  margin-left: 5%;
+
+  @include vp-1023 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.early-booking h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-1023 {
+    font-size: 34px;
+    line-height: 51px;
+    margin-bottom: 5px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 13px;
+  }
+}
+
+.early-booking p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  max-width: 352px;
+
+  @include vp-1023 {
+    margin: 0 auto;
+    margin-bottom: 51px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 34px;
+  }
+}
+
+.early-booking br {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
+.early-booking__form {
+  margin-left: auto;
+  margin-right: 5%;
+  width: 405px;
+  min-height: 455px;
+  background-color: $color-tangaroa;
+  padding: 50px;
+
+  @include vp-1023 {
+    padding: 45px 50px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 35px 30px 40px;
+  }
+}
+
+.early-booking__form p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+  color: $color-alice-blue;
+  letter-spacing: -0.02em;
+
+  @include vp-1023 {
+    margin-bottom: 26px;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 28px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.early-booking__form fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.early-booking__form-field input {
+  width: 100%;
+  background-color: $color-alice-blue;
+  padding: 11px 16px;
+  margin: 0;
+  margin-bottom: 20px;
+  border: none;
+  color: $color-tangaroa;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: #011c40b2;
+  }
+
+  @include hover-focus {
+    outline: 1px solid $color-alice-blue;
+    outline-offset: 2px;
+    cursor: pointer;
+
+    @include disabled {
+      outline: none;
+      pointer-events: none;
+    }
+  }
+
+  @include disabled {
+    pointer-events: none;
+    background-color: #bfbfbf;
+
+    &::placeholder {
+      color: #606060;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 19px;
+  }
+}
+
+.early-booking__consent-container {
+  position: relative;
+}
+
+.early-booking__consent-container input {
+  left: 9px;
+  bottom: 0;
+
+  @include vp-767 {
+    left: 9px;
+    bottom: 0;
+  }
+}
+
+.early-booking__consent-container input:hover + .early-booking__form-label::before,
+.early-booking__consent-container input:focus + .early-booking__form-label::before,
+.early-booking__consent-container input:focus-visible + .early-booking__form-label::before {
+  outline: 1px solid $color-alice-blue;
+  outline-offset: 2px;
+  cursor: pointer;
+}
+
+.early-booking__consent-container input:disabled + .early-booking__form-label {
+  pointer-events: none;
+  color: #606060;
+}
+
+.early-booking__consent-container input:disabled + .early-booking__form-label::before {
+  background-color: #bfbfbf;
+}
+
+.early-booking__consent-container input:checked + .early-booking__form-label::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  background-image: url("../img/svg/v-mark.svg");
+  background-size: 10px 6px;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 0;
+  transform: translate(35%, -50%);
+}
+
+.early-booking__form-label {
+  display: block;
+  position: relative;
+  font-size: 10px;
+  line-height: 13px;
+  color: $color-alice-blue;
+  margin-bottom: 35px;
+  padding-left: 23px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-alice-blue;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+  }
+
+  @include vp-767 {
+    padding-left: 28px;
+    margin-bottom: 28px;
+  }
+}
+
+.early-booking__form button {
+  width: 100%;
+  font-weight: 600;
+}
