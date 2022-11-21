@@ -67,13 +67,10 @@
   margin-bottom: 12px;
 }
 
-.main-catalog__description p:last-of-type {
-  margin: 0;
-}
-
 .main-catalog__item {
   display: flex;
-  min-height: 386px;
+  height: 386px;
+  overflow-y: auto;
   position: relative;
   flex-direction: column;
   justify-content: flex-end;
