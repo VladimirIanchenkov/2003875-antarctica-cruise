@@ -1,0 +1,156 @@
+.main-catalog {
+  padding-top: 85px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 57px;
+    padding-bottom: 48px;
+  }
+}
+
+.main-catalog h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+  margin: 0;
+  margin-bottom: 50px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.main-catalog__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2vw;
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include vp-1023 {
+    gap: 4vw;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.main-catalog__description {
+  display: none;
+}
+
+.main-catalog__description h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+}
+
+.main-catalog__description p {
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.main-catalog__description p:last-of-type {
+  margin: 0;
+}
+
+.main-catalog__item {
+  display: flex;
+  min-height: 386px;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 23px 30px;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    justify-content: flex-start;
+    padding: 28px 25px 35px;
+    cursor: pointer;
+    background-color: $color-tangaroa;
+
+    .main-catalog__image {
+      display: none;
+    }
+
+    .main-catalog__description {
+      display: flex;
+      flex-direction: column;
+      color: $color-alice-blue;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+    }
+
+    .main-catalog__link {
+      display: block;
+    }
+
+    @include vp-1023 {
+      padding: 28px 35px 35px;
+    }
+
+    @include vp-767 {
+      padding: 28px 25px 35px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 28px 33px;
+  }
+
+  @include vp-767 {
+    padding: 18px 24px;
+  }
+}
+
+.main-catalog__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-catalog__item h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  color: $color-alice-blue;
+  z-index: 1;
+}
+
+.main-catalog__link {
+  display: none;
+  padding: 10px 20px 10px;
+  margin: 0;
+  margin-top: auto;
+  font-weight: 600;
+  line-height: 21px;
+}

@@ -2,6 +2,7 @@
   display: inline-block;
   vertical-align: middle;
   height: 38px;
+  cursor: pointer;
 
   &--disabled {
     pointer-events: none;

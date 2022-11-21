@@ -25,6 +25,19 @@
   }
 }
 
+@mixin hover-focus-mobile {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:focus,
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
 @mixin hover-focus {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {

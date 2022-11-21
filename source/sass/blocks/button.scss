@@ -1,7 +1,8 @@
 .button {
   display: inline-block;
   vertical-align: middle;
-  padding: 15px 20px 17px 20px;
+  text-align: center;
+  padding: 15px 20px 17px;
 
   color: $color-tangaroa;
 
@@ -23,5 +24,13 @@
 
   @include hover-focus {
     opacity: 0.8;
+
+    @include active {
+      opacity: 0.6;
+    }
+  }
+
+  @include active {
+    opacity: 0.6;
   }
 }
