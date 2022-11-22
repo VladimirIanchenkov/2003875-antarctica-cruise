@@ -78,7 +78,8 @@
 
   &:hover,
   &:focus,
-  &:focus-visible {
+  &:focus-visible,
+  &:focus-within {
     justify-content: flex-start;
     padding: 28px 25px 35px;
     cursor: pointer;

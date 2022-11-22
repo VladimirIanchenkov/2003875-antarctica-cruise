@@ -6,6 +6,10 @@ const prefixNumber = (str) => {
   if (str === '7') {
     return '8';
   }
+
+  if (str === '9') {
+    return '89';
+  }
   return '8';
 };
 
@@ -15,7 +19,7 @@ const checkFirstNumber = () => {
       const value = el.value.replace(/\D+/g, '');
       let result;
 
-      if (el.value.includes('+8')) {
+      if (el.value.includes('+7')) {
         result = '8';
       } else {
         result = '';

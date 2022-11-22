@@ -167,7 +167,6 @@
   @include hover-focus {
     outline: 1px solid $color-alice-blue;
     outline-offset: 2px;
-    cursor: pointer;
 
     @include disabled {
       outline: none;
