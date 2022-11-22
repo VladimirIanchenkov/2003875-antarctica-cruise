@@ -1,6 +1,7 @@
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const overlay = document.querySelector('.overlay');
+const links = document.querySelector('.main-nav').querySelectorAll('a');
 
 // Реализация выпадающего меню
 const initMenu = () => {
@@ -21,6 +22,11 @@ const openModal = () => {
   document.body.style.overflow = 'hidden';
 };
 
+const onLinkClick = () => {
+  links.forEach((link) => link.addEventListener('click', () => {
+    closeModal();
+  }));
+};
 
 const onScreenClick = () => {
   window.addEventListener('click', (evt) => {
@@ -32,6 +38,7 @@ const onScreenClick = () => {
 
 const initMenuButton = () => {
   initMenu();
+  onLinkClick();
   onScreenClick();
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
