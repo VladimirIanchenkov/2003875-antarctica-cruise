@@ -804,13 +804,27 @@ button,
   padding-top: 35px;
   padding-bottom: 258px;
   min-height: 650px;
-  background-color: #083066;
-  background-image: url("../img/background-promo-image-desktop.jpg");
-  background-position: 50% 64%;
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2509803922));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2509803922));
+}
+
+.main-header__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #083066;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 80%;
+  object-position: 50% 80%;
+  z-index: -1;
+}
+
+.main-header__image--mobile,
+.main-header__image--tablet {
+  display: none;
 }
 
 .main-header h1 {
@@ -1069,13 +1083,28 @@ button,
 }
 
 .advantages {
+  position: relative;
   padding-top: 110px;
   padding-bottom: 120px;
-  background-image: url("../img/background-advantages-image-desktop.jpg");
+}
+
+.advantages__background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
   background-color: #ecf6ff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+  z-index: -1;
+}
+
+.advantages__background-image--mobile,
+.advantages__background-image--tablet {
+  display: none;
 }
 
 .advantages h2 {
@@ -1258,13 +1287,29 @@ button,
 }
 
 .early-booking {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("../img/background-booking-image-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
   min-height: 555px;
+}
+
+.early-booking__background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ecf6ff;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 100%;
+  object-position: 50% 100%;
+  z-index: -1;
+}
+
+.early-booking__background-image--mobile,
+.early-booking__background-image--tablet {
+  display: none;
 }
 
 .early-booking__container {
@@ -1615,10 +1660,21 @@ button,
     padding-top: 30px;
     padding-bottom: 255px;
     min-height: 638px;
-    background-image: url("../img/background-promo-image-tablet.jpg");
-    background-position: 50% 44%;
     -webkit-filter: none;
     filter: none;
+  }
+
+  .main-header__image {
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+  }
+
+  .main-header__image--desktop {
+    display: none;
+  }
+
+  .main-header__image--tablet {
+    display: block;
   }
 
   .main-header h1 {
@@ -1711,7 +1767,14 @@ button,
   .advantages {
     padding-top: 90px;
     padding-bottom: 100px;
-    background-image: url("../img/background-advantages-image-tablet.jpg");
+  }
+
+  .advantages__background-image--desktop {
+    display: none;
+  }
+
+  .advantages__background-image--tablet {
+    display: block;
   }
 
   .advantages h2 {
@@ -1759,8 +1822,15 @@ button,
   .early-booking {
     padding-top: 85px;
     padding-bottom: 100px;
-    background-image: url("../img/background-booking-image-tablet.jpg");
     min-height: 805px;
+  }
+
+  .early-booking__background-image--desktop {
+    display: none;
+  }
+
+  .early-booking__background-image--tablet {
+    display: block;
   }
 
   .early-booking__container {
@@ -1825,18 +1895,6 @@ button,
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .main-header {
-    background-image: url("../img/background-promo-image-tablet@2x.jpg");
-  }
-
-  .advantages {
-    background-image: url("../img/background-advantages-image-tablet@2x.jpg");
-  }
-
-  .early-booking {
-    background-image: url("../img/background-booking-image-tablet@2x.jpg");
-  }
-
   .contacts__map--nojs {
     background-image: url("../img/map-image-tablet@2x.jpg");
   }
@@ -1864,8 +1922,19 @@ button,
     padding-top: 20px;
     padding-bottom: 158px;
     min-height: 500px;
-    background-image: url("../img/background-promo-image-mobile.jpg");
-    background-position: 50% 76%;
+  }
+
+  .main-header__image {
+    -o-object-position: 50% 78%;
+    object-position: 50% 78%;
+  }
+
+  .main-header__image--tablet {
+    display: none;
+  }
+
+  .main-header__image--mobile {
+    display: block;
   }
 
   .main-header h1 {
@@ -2067,7 +2136,14 @@ button,
   .advantages {
     padding-top: 57px;
     padding-bottom: 65px;
-    background-image: url("../img/background-advantages-image-mobile.jpg");
+  }
+
+  .advantages__background-image--tablet {
+    display: none;
+  }
+
+  .advantages__background-image--mobile {
+    display: block;
   }
 
   .advantages h2 {
@@ -2130,9 +2206,20 @@ button,
   .early-booking {
     padding-top: 62px;
     padding-bottom: 65px;
-    background-image: url("../img/background-booking-image-mobile.jpg");
-    background-position: 50% 50%;
     min-height: 760px;
+  }
+
+  .early-booking__background-image {
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+  }
+
+  .early-booking__background-image--tablet {
+    display: none;
+  }
+
+  .early-booking__background-image--mobile {
+    display: block;
   }
 
   .early-booking h2 {
@@ -2219,18 +2306,6 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .main-header {
-    background-image: url("../img/background-promo-image-mobile@2x.jpg");
-  }
-
-  .advantages {
-    background-image: url("../img/background-advantages-image-mobile@2x.jpg");
-  }
-
-  .early-booking {
-    background-image: url("../img/background-booking-image-mobile@2x.jpg");
-  }
-
   .contacts__map--nojs {
     background-image: url("../img/map-image-mobile@2x.jpg");
   }
@@ -2278,18 +2353,6 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .main-header {
-    background-image: url("../img/background-promo-image-desktop@2x.jpg");
-  }
-
-  .advantages {
-    background-image: url("../img/background-advantages-image-desktop@2x.jpg");
-  }
-
-  .early-booking {
-    background-image: url("../img/background-booking-image-desktop@2x.jpg");
-  }
-
   .contacts__map--nojs {
     background-image: url("../img/map-image-desktop@2x.jpg");
   }
