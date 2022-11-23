@@ -6,24 +6,24 @@ document.addEventListener('scroll', initYandexMapOnEvent);
 document.addEventListener('mousemove', initYandexMapOnEvent);
 document.addEventListener('touchstart', initYandexMapOnEvent);
 
-function initYandexMapOnEvent (e) {
+function initYandexMapOnEvent (evt) {
   initYandexMap();
-  e.currentTarget.removeEventListener(e.type, initYandexMapOnEvent);
+  evt.currentTarget.removeEventListener(evt.type, initYandexMapOnEvent);
 }
 
 function initYandexMap () {
   if (window.yandexMapDidInit) {
-      return false;
+    return false;
   }
   window.yandexMapDidInit = true;
 
-  let elem = document.createElement('script');
-  elem.type = 'text/javascript';
-  elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=aa2e24c8-e05f-4356-8994-4b3c5d7c4590&load=package.standard&lang=ru_RU';
-  elem.onload = function () {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://api-maps.yandex.ru/2.1/?apikey=aa2e24c8-e05f-4356-8994-4b3c5d7c4590&load=package.standard&lang=ru_RU';
+  script.onload = function () {
     ymaps.ready(getYaMap);
   };
-  document.querySelector('body').appendChild(elem);
+  document.querySelector('body').appendChild(script);
 }
 
 function getYaMap () {
