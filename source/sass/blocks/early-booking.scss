@@ -1,36 +1,57 @@
 .early-booking {
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("../img/background-booking-image-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
   min-height: 555px;
-
-  @include retina {
-    background-image: url("../img/background-booking-image-desktop@2x.jpg");
-  }
 
   @include vp-1023 {
     padding-top: 85px;
     padding-bottom: 100px;
-    background-image: url("../img/background-booking-image-tablet.jpg");
     min-height: 805px;
-
-    @include retina {
-      background-image: url("../img/background-booking-image-tablet@2x.jpg");
-    }
   }
 
   @include vp-767 {
     padding-top: 62px;
     padding-bottom: 65px;
-    background-image: url("../img/background-booking-image-mobile.jpg");
-    background-position: 50% 50%;
     min-height: 760px;
+  }
+}
 
-    @include retina {
-      background-image: url("../img/background-booking-image-mobile@2x.jpg");
+.early-booking__background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ecf6ff;
+  object-fit: cover;
+  object-position: 50% 100%;
+  z-index: -1;
+
+  &--mobile,
+  &--tablet {
+    display: none;
+  }
+
+  @include vp-1023 {
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    object-position: 50% 50%;
+
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
     }
   }
 }

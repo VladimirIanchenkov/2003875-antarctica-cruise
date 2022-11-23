@@ -1,33 +1,52 @@
 .advantages {
+  position: relative;
   padding-top: 110px;
   padding-bottom: 120px;
-  background-image: url("../img/background-advantages-image-desktop.jpg");
-  background-color: #ecf6ff;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-  @include retina {
-    background-image: url("../img/background-advantages-image-desktop@2x.jpg");
-  }
 
   @include vp-1023 {
     padding-top: 90px;
     padding-bottom: 100px;
-    background-image: url("../img/background-advantages-image-tablet.jpg");
-
-    @include retina {
-      background-image: url("../img/background-advantages-image-tablet@2x.jpg");
-    }
   }
 
   @include vp-767 {
     padding-top: 57px;
     padding-bottom: 65px;
-    background-image: url("../img/background-advantages-image-mobile.jpg");
+  }
+}
 
-    @include retina {
-      background-image: url("../img/background-advantages-image-mobile@2x.jpg");
+.advantages__background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #ecf6ff;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: -1;
+
+  &--mobile,
+  &--tablet {
+    display: none;
+  }
+
+  @include vp-1023 {
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
     }
   }
 }

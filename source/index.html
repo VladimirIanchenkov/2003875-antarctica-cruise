@@ -10,7 +10,7 @@
     <link rel="preload" href="./fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="img/background-promo-image-desktop@2x.jpg" as="image">
+    <!-- <link rel="preload" href="img/background-promo-image-desktop@2x.jpg" as="image">
     <link rel="preload" href="img/background-promo-image-tablet@2x.jpg" as="image">
     <link rel="preload" href="img/background-promo-image-mobile@2x.jpg" as="image">
     <link rel="preload" href="img/background-advantages-image-desktop@2x.jpg" as="image">
@@ -18,7 +18,7 @@
     <link rel="preload" href="img/background-advantages-image-mobile@2x.jpg" as="image">
     <link rel="preload" href="img/background-booking-image-desktop@2x.jpg" as="image">
     <link rel="preload" href="img/background-booking-image-tablet@2x.jpg" as="image">
-    <link rel="preload" href="img/background-booking-image-mobile@2x.jpg" as="image">
+    <link rel="preload" href="img/background-booking-image-mobile@2x.jpg" as="image"> -->
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="./img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicon/apple.png">
@@ -32,6 +32,18 @@
     <div class="wrapper">
 
       <header class="main-header">
+        <picture>
+          <source type="image/webp" srcset="img/content/background-promo-image-desktop.webp 1x, img/content/background-promo-image-desktop@2x.webp 2x">
+          <img class="main-header__image main-header__image--desktop" src="img/content/background-promo-image-desktop.jpg" srcset="img/content/background-promo-image-desktop@2x.jpg" width="1366" height="650" alt="Фоновое изображение: льды Антарктики.">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/background-promo-image-tablet.webp 1x, img/content/background-promo-image-tablet@2x.webp 2x">
+          <img class="main-header__image main-header__image--tablet" src="img/content/background-promo-image-tablet.jpg" srcset="img/content/background-promo-image-tablet@2x.jpg" width="768" height="638" alt="Фоновое изображение: льды Антарктики.">
+        </picture>
+        <picture>
+          <source type="image/webp" srcset="img/content/background-promo-image-mobile.webp 1x, img/content/background-promo-image-mobile@2x.webp 2x">
+          <img class="main-header__image main-header__image--mobile" src="img/content/background-promo-image-mobile.jpg" srcset="img/content/background-promo-image-mobile@2x.jpg" width="320" height="500" alt="Фоновое изображение: льды Антарктики.">
+        </picture>
         <div class="main-header__container container">
           <div class="overlay"></div>
           <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -84,6 +96,18 @@
         </section>
 
         <section class="advantages" id="advantages">
+          <picture>
+            <source type="image/webp" srcset="img/content/background-advantages-image-desktop.webp 1x, img/content/background-advantages-image-desktop@2x.webp 2x">
+            <img class="advantages__background-image advantages__background-image--desktop" src="img/content/background-advantages-image-desktop.jpg" srcset="img/content/background-advantages-image-desktop@2x.jpg" width="1366" height="562" alt="Фоновое изображение: льды Антарктики с белым фильтром.">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/background-advantages-image-tablet.webp 1x, img/content/background-advantages-image-tablet@2x.webp 2x">
+            <img class="advantages__background-image advantages__background-image--tablet" src="img/content/background-advantages-image-tablet.jpg" srcset="img/content/background-advantages-image-tablet@2x.jpg" width="768" height="588" alt="Фоновое изображение: льды Антарктики с белым фильтром.">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/background-advantages-image-mobile.webp 1x, img/content/background-advantages-image-mobile@2x.webp 2x">
+            <img class="advantages__background-image advantages__background-image--mobile" src="img/content/background-advantages-image-mobile.jpg" srcset="img/content/background-advantages-image-mobile@2x.jpg" width="320" height="997" alt="Фоновое изображение: льды Антарктики с белым фильтром.">
+          </picture>
           <div class="advantages__container container">
             <h2>Преимущества</h2>
             <ul class="advantages__list">
@@ -273,6 +297,18 @@
         </section>
 
         <section class="early-booking">
+          <picture>
+            <source type="image/webp" srcset="img/content/background-booking-image-desktop.webp 1x, img/content/background-booking-image-desktop@2x.webp 2x">
+            <img class="early-booking__background-image early-booking__background-image--desktop" src="img/content/background-booking-image-desktop.jpg" srcset="img/content/background-booking-image-desktop@2x.jpg" width="1366" height="555" alt="Фоновое изображение: материковые льды Антарктики.">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/background-booking-image-tablet.webp 1x, img/content/background-booking-image-tablet@2x.webp 2x">
+            <img class="early-booking__background-image early-booking__background-image--tablet" src="img/content/background-booking-image-tablet.jpg" srcset="img/content/background-booking-image-tablet@2x.jpg" width="768" height="805" alt="Фоновое изображение: материковые льды Антарктики.">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/content/background-booking-image-mobile.webp 1x, img/content/background-booking-image-mobile@2x.webp 2x">
+            <img class="early-booking__background-image early-booking__background-image--mobile" src="img/content/background-booking-image-mobile.jpg" srcset="img/content/background-booking-image-mobile@2x.jpg" width="320" height="760" alt="Фоновое изображение: материковые льды Антарктики.">
+          </picture>
           <div class="early-booking__container container">
             <div class="early-booking__container-inner">
               <h2>Раннее бронирование</h2>
