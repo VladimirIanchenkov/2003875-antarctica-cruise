@@ -894,7 +894,7 @@ button,
 }
 
 .main-nav__item {
-  margin-left: 29px;
+  margin-left: 36px;
   max-width: 200px;
 }
 
@@ -902,7 +902,6 @@ button,
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-  font-weight: 500;
   line-height: 20px;
   color: #f9fbfd;
   padding-top: 9px;
@@ -928,12 +927,13 @@ button,
 
 .main-nav--opened .main-nav__toggle {
   background-image: url("../img/svg/cross.svg");
-  background-size: 12px 12px;
+  background-position: right;
+  background-size: 15px 15px;
 }
 
 .main-footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 52px;
+  padding-bottom: 53px;
   background-color: #011c40;
 }
 
@@ -943,9 +943,6 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .main-footer__nav-list {
@@ -954,9 +951,6 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -968,14 +962,13 @@ button,
 }
 
 .main-footer__nav-item {
-  margin-left: 30px;
+  margin-left: 34px;
 }
 
 .main-footer__nav-item a {
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-  font-weight: 500;
   line-height: 20px;
   color: #f9fbfd;
   padding-top: 8px;
@@ -997,9 +990,6 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -1012,6 +1002,7 @@ button,
 
 .social__item {
   margin-left: 17px;
+  margin-top: 7px;
 }
 
 .social__link {
@@ -1200,7 +1191,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 386px;
+  aspect-ratio: 260/386;
   overflow-y: auto;
   position: relative;
   -webkit-box-orient: vertical;
@@ -1332,6 +1323,7 @@ button,
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
+  letter-spacing: 0.01em;
   margin: 0;
   margin-bottom: 12px;
 }
@@ -1353,7 +1345,7 @@ button,
   width: 405px;
   min-height: 455px;
   background-color: #011c40;
-  padding: 50px;
+  padding: 45px 50px;
 }
 
 .early-booking__form p {
@@ -1512,7 +1504,7 @@ button,
 
 .contacts {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 122px;
 }
 
 .contacts__container {
@@ -1567,6 +1559,17 @@ button,
   letter-spacing: -0.02em;
 }
 
+.contacts__address-container address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 23px;
+}
+
 .contacts__address-container address > p,
 .contacts__address-container address > a {
   position: relative;
@@ -1586,10 +1589,6 @@ button,
   width: 18px;
   top: 0;
   left: 0;
-}
-
-.contacts__address-container address > p {
-  margin-bottom: 23px;
 }
 
 .contacts__address-container address > p::after {
@@ -1699,7 +1698,7 @@ button,
   }
 
   .main-nav__item {
-    margin-left: 20px;
+    margin-left: 26px;
   }
 
   .main-nav__item a {
@@ -1710,8 +1709,12 @@ button,
   }
 
   .main-footer {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+  .main-footer__logo {
+    margin-top: 5px;
   }
 
   .main-footer__nav-list {
@@ -1719,7 +1722,7 @@ button,
   }
 
   .main-footer__nav-item {
-    margin-left: 19px;
+    margin-left: 22px;
   }
 
   .main-footer__nav-item a {
@@ -1729,6 +1732,7 @@ button,
 
   .social__item {
     margin-left: 13px;
+    margin-top: 3px;
   }
 
   .social__link {
@@ -1816,6 +1820,7 @@ button,
   }
 
   .main-catalog__item {
+    aspect-ratio: 309/386;
     padding: 28px 33px;
   }
 
@@ -1854,11 +1859,10 @@ button,
 
   .early-booking p {
     margin: 0 auto;
-    margin-bottom: 51px;
+    margin-bottom: 53px;
   }
 
   .early-booking__form {
-    padding: 45px 50px;
     margin: 0;
   }
 
@@ -1868,7 +1872,7 @@ button,
 
   .contacts {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 104px;
   }
 
   .contacts__map--nojs {
@@ -1891,6 +1895,10 @@ button,
 
   .contacts__address-container p {
     margin-bottom: 28px;
+  }
+
+  .contacts__address-container address > p::after {
+    top: 6px;
   }
 }
 
@@ -1979,7 +1987,7 @@ button,
     padding: 20px 15px;
     top: 0;
     right: 0;
-    width: 90%;
+    width: 89%;
     height: 100vh;
     overflow-y: scroll;
     z-index: 1;
@@ -2011,6 +2019,7 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     margin: 0;
+    letter-spacing: -0.03em;
   }
 
   .main-nav__item {
@@ -2024,11 +2033,12 @@ button,
     padding: 10px;
     font-size: 18px;
     line-height: 22px;
+    font-weight: 500;
   }
 
   .main-nav--nojs .main-header__logo,
   .main-nav--opened .main-header__logo {
-    margin-bottom: 23px;
+    margin-bottom: 33px;
   }
 
   .main-nav--nojs .main-header__logo svg,
@@ -2045,7 +2055,7 @@ button,
     border: none;
     background: none;
     background-image: url("../img/svg/hamburger.svg");
-    background-size: 24px 12px;
+    background-size: 24px 13px;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -2067,6 +2077,7 @@ button,
   }
 
   .main-footer__logo {
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
@@ -2098,6 +2109,7 @@ button,
 
   .social__item {
     margin-left: 0;
+    margin-top: 0;
   }
 
   .social__item:not(:last-of-type) {
@@ -2183,13 +2195,6 @@ button,
   }
 
   .main-catalog__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -2200,6 +2205,7 @@ button,
   }
 
   .main-catalog__item {
+    aspect-ratio: 270/386;
     padding: 18px 24px;
   }
 
@@ -2302,6 +2308,10 @@ button,
     order: 0;
     width: 100%;
     margin-bottom: 34px;
+  }
+
+  .contacts__address-container address > p::after {
+    top: 3px;
   }
 }
 
