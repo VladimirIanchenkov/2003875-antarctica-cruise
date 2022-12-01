@@ -1,10 +1,10 @@
 .contacts {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 122px;
 
   @include vp-1023 {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 104px;
   }
 
   @include vp-767 {
@@ -118,6 +118,13 @@
   }
 }
 
+
+.contacts__address-container address {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
 .contacts__address-container address > p,
 .contacts__address-container address > a {
   position: relative;
@@ -139,13 +146,19 @@
 }
 
 .contacts__address-container address > p {
-  margin-bottom: 23px;
-
   &::after {
     height: 22px;
     background-image: url("../img/svg/icon-pin.svg");
     background-size: 18px 22px;
     background-repeat: no-repeat;
+
+    @include vp-1023 {
+      top: 6px;
+    }
+
+    @include vp-767 {
+      top: 3px;
+    }
   }
 }
 

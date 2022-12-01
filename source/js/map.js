@@ -30,10 +30,13 @@ function getYaMap () {
   let myMap;
   myMap = new ymaps.Map('map', {
       center: [59.93955, 30.32358],
-      zoom: 15.5
+      zoom: 15.5,
+      controls: ['zoomControl', 'typeSelector',  'fullscreenControl', 'routeButtonControl']
   }, {
       searchControlProvider: 'yandex#search'
   }),
+
+  myMap.tabIndex = 0;
 
   myPlacemark = new ymaps.Placemark([59.938635, 30.323118],{
   }, {

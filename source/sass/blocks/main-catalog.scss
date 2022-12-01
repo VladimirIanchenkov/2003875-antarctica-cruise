@@ -43,8 +43,6 @@
   padding-right: 15px;
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -69,7 +67,7 @@
 
 .main-catalog__item {
   display: flex;
-  height: 386px;
+  aspect-ratio: 260 / 386;
   overflow-y: auto;
   position: relative;
   flex-direction: column;
@@ -119,10 +117,12 @@
   }
 
   @include vp-1023 {
+    aspect-ratio: 309 / 386;
     padding: 28px 33px;
   }
 
   @include vp-767 {
+    aspect-ratio: 270 / 386;
     padding: 18px 24px;
   }
 }
